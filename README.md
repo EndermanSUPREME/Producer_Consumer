@@ -11,14 +11,14 @@ something is created. We were asked to use `semaphores` to help synchronize the 
 consider `Mutual Exclusion` using a `mutex` which allows us to lock the shared buffer allowing us to ensure only one process is
 interacting with the shared buffer at a time, the main operations of the processes are perform through `threads`.
 
-## Compile: :computer:
-### Dependencies: :warning:
+## Compile:
+### Dependencies:
 Install the following dependencies before attempting to build:
 ```bash
 sudo apt update && sudo apt install g++
 ```
 
-### Build instructions :hammer:
+### Build instructions
 ```bash
 git clone https://github.com/EndermanSUPREME/Producer_Consumer.git
 cd Producer_Consumer
@@ -26,7 +26,7 @@ chmod +x run.sh
 ./run.sh run
 ```
 
-*More about run.sh*: :scroll:<br>
+*More about run.sh*:<br>
 `./run.sh` is a bash-script used to automate program compiling and clean-up operations, clean-up is needed because producer
 and consumer are background processes running infinite loops, meaning if not terminated they run until system
 restart or crash in worst case.
@@ -39,7 +39,7 @@ Options:
   clean     Clean stray producers & consumers
 ```
 
-## Example Execution: :bulb:
+## Example Execution:
 WSL Bash Terminal Output:
 ```bash
 ender@ihatewindows:~/KentState/Producer_Consumer$ ./run.sh run; sleep 5; ./run.sh clean
