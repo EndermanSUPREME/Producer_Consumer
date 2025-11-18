@@ -26,6 +26,12 @@ chmod +x run.sh
 ./run.sh run
 ```
 
+**NOTICE**
+If you get an error about the shared buffer you may need to run the compiled binaries manually. This error is because the OS is starting the consumer process before the producer process. To fix this you can use the sleep command to give producer more time to properly start and execute.
+```bash
+./producer &; sleep 1; ./consumer &
+```
+
 *More about run.sh*:<br>
 `./run.sh` is a bash-script used to automate program compiling and clean-up operations, clean-up is needed because producer
 and consumer are background processes running infinite loops, meaning if not terminated they run until system

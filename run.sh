@@ -22,6 +22,7 @@ if [ "$mode" = "run" ]; then
     g++ consumer.cpp sharedbuff.hpp -pthread -lrt -o consumer && \
     echo "[*] Executing Producer and Consumer" && (
         (./producer &)
+        (sleep 1) # ensure producer process is started before consumer
         (./consumer &)
     )
 elif [ "$mode" = "clean" ]; then
